@@ -1,0 +1,47 @@
+# Nom du workflow qui apparaîtra dans l'onglet "Actions" de votre dépôt
+name: Deploy to GitHub Pages
+
+# Déclencheur : ce workflow s'exécute à chaque push sur la branche 'main'
+on:
+  push:
+    branches:
+      - main # ou 'master' selon le nom de votre branche principale
+
+# Permissions nécessaires pour que l'action puisse écrire sur GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Tâches à exécuter
+jobs:
+  deploy:
+    # Utilise la dernière version d'Ubuntu comme environnement d'exécution
+    runs-on: ubuntu-latest
+    
+    # Spécifie que ce job déploie sur l'environnement GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # 1. Récupère le code de votre dépôt
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Prépare les fichiers du site pour le déploiement
+      # Pour un site statique simple, il suffit de spécifier le dossier racine './'
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 3. Crée un "artefact" (un package) avec le contenu de votre site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Chemin vers les fichiers à déployer. Pour vous, c'est la racine.
+          path: '.'
+
+      # 4. Déploie l'artefact sur GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
