@@ -4,162 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de CarolixTech, organisme amateur spécialisé dans la création de sites web et d'applications Android. Découvrez nos projets comme Moulah et Knight's Tour.">
+    <!-- Google Fonts pour une meilleure typographie -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Portfolio Numérique - CarolixTech </title>
-    <style>
-        /* Variables CSS pour les couleurs */
-        :root {
-            --light-green: #d4edc4; /* Vert clair principal */
-            --dark-green: #4f8a10;  /* Vert foncé pour le texte/accents */
-            --background: #f0fff0;   /* Arrière-plan très clair, presque blanc */
-            --accent-color: #ff9933; /* Une couleur d'accent pour le bouton Ko-fi */
-        }
-
-        /* Styles de base */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background);
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Conteneur principal - Centrage et max-width */
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* En-tête (Header) */
-        header {
-            background-color: var(--light-green);
-            padding: 60px 20px;
-            border-bottom: 5px solid var(--dark-green);
-        }
-
-        header h1 {
-            color: var(--dark-green);
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        /* Section Portfolio */
-        .portfolio-section {
-            padding: 40px 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .portfolio-section h2 {
-            color: var(--dark-green);
-            font-size: 2em;
-            margin-bottom: 30px;
-        }
-
-        /* Grille des projets (Simulation de dynamisme) */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .project-card {
-            background-color: var(--light-green);
-            padding: 20px;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: left;
-            border-left: 5px solid var(--dark-green);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px); /* Effet dynamique au survol */
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-
-        .project-card h3 {
-            color: var(--dark-green);
-            margin-top: 0;
-        }
-
-        /* Style pour les liens "En savoir plus" des projets */
-        .project-link {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 15px;
-            background-color: var(--dark-green);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .project-link:hover { background-color: #3e6b0d; }
-        
-        /* Étiquette du type de projet */
-        .project-tag {
-            display: inline-block;
-            background-color: var(--dark-green);
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            margin-bottom: 10px;
-        }
-
-        /* Section de Contact/Dons */
-        .contact-section {
-            background-color: var(--background);
-            padding: 50px 20px;
-        }
-
-        /* Bouton Ko-fi */
-        .ko-fi-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 1.1em;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-
-        .ko-fi-button:hover {
-            background-color: #e68a2e; /* Assombrissement au survol */
-        }
-
-        /* Pied de page (Footer) */
-        footer {
-            background-color: var(--dark-green);
-            color: white;
-            padding: 15px 0;
-            font-size: 0.9em;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-        }
-    </style>
 </head>
 <body>
 
     <header>
         <div class="container">
-            <h1>Développeur 🛠️📱</h1>
+            <h1>CarolixTech 🛠️📱</h1>
             <p>Bienvenue ! Nous sommes CarolixTech, organisme amateur pour la création de sites web performants et d'applications Android dynamiques. Découvrez notre travail ci-dessous !</p>
         </div>
     </header>
@@ -167,31 +23,51 @@
     <div class="container">
         
         <section class="portfolio-section">
-            <h2>Mes Projets Récents et Dynamiques</h2>
+            <h2>Nos Projets Récents</h2>
             
             <div class="project-grid">
                 
                 <div class="project-card">
-                    <span class="project-tag">Android App</span>
-                    <h3>Moulah : Gamification du Travail</h3>
-                    <p>Une application innovante conçue pour <strong>gamifier</strong> votre journée de travail. Visualisez votre productivité en <strong>temps réel</strong> pour rester motivé et rendre le travail plus engageant !</p>
-                    <a href="#" class="project-link" target="_blank">Voir sur GitHub →</a>
+                    <div class="project-content">
+                        <span class="project-tag">Android App</span>
+                        <h3>Moulah : Gamification du Travail</h3>
+                        <p style="text-align: left;">Une application innovante conçue pour <strong>gamifier</strong> votre journée de travail. Visualisez votre productivité en <strong>temps réel</strong> pour rester motivé et rendre le travail moint ch**nt!</p>
+                        <a href="#" class="project-link" target="_blank">Voir sur GitHub →</a>
+                    </div>
+                    <br>
+                    <div class="project-image-container" data-project="moulah">
+                        <img src="moulah_3.png" class="project-image active" title="Document PDF 1 pour Moulah"></img>
+                        <img src="moulah_2.png" class="project-image" title="Document PDF 2 pour Moulah"></img>
+                        <img src="moulah_1.png" class="project-image" title="Document PDF 2 pour Moulah"></img>
+                        <a class="prev" onclick="changeImage('moulah', -1)">&#10094;</a>
+                        <a class="next" onclick="changeImage('moulah', 1)">&#10095;</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <span class="project-tag">Jeu Web (Static)</span>
-                    <h3>Knight's Tour (knightstour.online)</h3>
-                    <p>Un <strong>jeu de réflexion</strong> solo captivant, accessible directement en ligne. Développé pour offrir une expérience utilisateur fluide et une logique de jeu complexe.</p>
-                    <a href="https://knightstour.online/" class="project-link" target="_blank">Jouer en Ligne →</a>
+                    <div class="project-content">
+                        <span class="project-tag">Jeu Web (Static)</span>
+                        <h3>Knight's Tour (knightstour.online)</h3>
+                        <p style="text-align: left;">Un <strong>jeu de réflexion</strong> solo captivant, accessible directement en ligne. Développé pour offrir une expérience utilisateur fluide et une logique de jeu complexe.</p>
+                        <a href="https://knightstour.online/" class="project-link" target="_blank">Jouer en Ligne →</a>
+                    </div>
+                    <br>
+                    <div class="project-image-container" data-project="knightstour">
+                        <img src="knightstour_1.png" alt="Capture d'écran 1 du jeu Knight's Tour" class="project-image active">
+                        <img src="knightstour_2.png" alt="Capture d'écran 2 du jeu Knight's Tour" class="project-image">
+                        <a class="prev" onclick="changeImage('knightstour', -1)">&#10094;</a>
+                        <a class="next" onclick="changeImage('knightstour', 1)">&#10095;</a>
+                    </div>
+
                 </div>
-                
-                </div>
+
+            </div>
         </section>
 
         <hr>
 
         <section class="contact-section">
-            <h2> Nous Soutenir </h2>
+            <h2>Nous Soutenir</h2>
             <p>Si votre travail vous plaît et vous a été utile, vous pouvez nous offrir un café ! ☕</p>
             <a href="https://ko-fi.com/carolix" target="_blank" class="ko-fi-button">
                 Faire un don via Ko-fi
@@ -207,5 +83,75 @@
         </div>
     </footer>
 
+    <script>
+        // Garde une trace de l'image actuellement affichée pour chaque projet
+        const currentImageIndices = {
+            moulah: 0,
+            knightstour: 0
+        };
+
+        // Fonction pour mettre à jour les indicateurs (points) du carrousel
+        function updateDots(projectId, currentIndex) {
+            const container = document.querySelector(`.project-image-container[data-project="${projectId}"]`);
+            const dotsContainer = container.querySelector('.carousel-dots');
+            if (!dotsContainer) return;
+
+            const dots = dotsContainer.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function changeImage(projectId, direction) {
+            const container = document.querySelector(`.project-image-container[data-project="${projectId}"]`);
+            const images = container.querySelectorAll('.project-image');
+            const totalImages = images.length;
+
+            if (totalImages === 0) return;
+
+            // Masque l'image actuelle
+            images[currentImageIndices[projectId]].classList.remove('active');
+
+            // Calcule l'index de la nouvelle image
+            currentImageIndices[projectId] = (currentImageIndices[projectId] + direction + totalImages) % totalImages;
+
+            // Affiche la nouvelle image
+            images[currentImageIndices[projectId]].classList.add('active');
+
+            // Met à jour les indicateurs (points)
+            updateDots(projectId, currentImageIndices[projectId]);
+        }
+
+        function currentSlide(projectId, n) {
+            currentImageIndices[projectId] = n;
+            changeImage(projectId, 0); // Change l'image sans direction spécifique, juste à l'index n
+        }
+
+        // Initialise le premier affichage pour chaque projet
+        document.addEventListener('DOMContentLoaded', () => {
+            for (const projectId in currentImageIndices) {
+                const container = document.querySelector(`.project-image-container[data-project="${projectId}"]`);
+                const images = container.querySelectorAll('.project-image');
+                const dotsContainer = container.querySelector('.carousel-dots');
+
+                if (images.length > 0 && dotsContainer) {
+                    // Crée les points indicateurs
+                    for (let i = 0; i < images.length; i++) {
+                        const dot = document.createElement('span');
+                        dot.classList.add('dot');
+                        dot.onclick = () => currentSlide(projectId, i);
+                        dotsContainer.appendChild(dot);
+                    }
+                    // Affiche la première image et active le premier point
+                    images[currentImageIndices[projectId]].classList.add('active');
+                    updateDots(projectId, currentImageIndices[projectId]);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
