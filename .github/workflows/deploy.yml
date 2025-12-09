@@ -29,19 +29,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Prépare les fichiers du site pour le déploiement
-      # Pour un site statique simple, il suffit de spécifier le dossier racine './'
+      # 2. Crée le fichier CNAME pour le domaine personnalisé
+      - name: Create CNAME file
+        run: echo 'www.carolix.site' > CNAME
+
+      # 3. Prépare les fichiers du site pour le déploiement
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 3. Crée un "artefact" (un package) avec le contenu de votre site
+      # 4. Crée un "artefact" (un package) avec le contenu de votre site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Chemin vers les fichiers à déployer. Pour vous, c'est la racine.
           path: '.'
 
-      # 4. Déploie l'artefact sur GitHub Pages
+      # 5. Déploie l'artefact sur GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
