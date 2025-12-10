@@ -18,7 +18,7 @@ jobs:
   deploy:
     # Utilise la dernière version d'Ubuntu comme environnement d'exécution
     runs-on: ubuntu-latest
-    
+
     # Spécifie que ce job déploie sur l'environnement GitHub Pages
     environment:
       name: github-pages
@@ -37,11 +37,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Generate Sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          path-to-root: ./ # Le dossier où se trouvent vos fichiers HTML (parfois ./public ou ./dist)
+          base-url-path: https://www.carolix.site/
+
       # 4. Crée un "artefact" (un package) avec le contenu de votre site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: "."
 
       # 5. Déploie l'artefact sur GitHub Pages
       - name: Deploy to GitHub Pages
