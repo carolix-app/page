@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
 
     <script type="application/ld+json">
         {
@@ -140,6 +140,12 @@
             knightstour: 0
         };
 
+        // Variable pour stocker l'intervalle du diaporama automatique
+        let slideInterval;
+
+        // Durée entre chaque diapositive (en millisecondes)
+        const slideDuration = 5000; // 5 secondes
+
         // Fonction pour mettre à jour les indicateurs (points) du carrousel
         function updateDots(projectId, currentIndex) {
             const container = document.querySelector(`.project-image-container[data-project="${projectId}"]`);
@@ -181,6 +187,21 @@
             changeImage(projectId, 0); // Change l'image sans direction spécifique, juste à l'index n
         }
 
+        // Démarre le diaporama automatique
+        function startAutoSlide() {
+            slideInterval = setInterval(() => {
+                for (const projectId in currentImageIndices) {
+                    changeImage(projectId, 1); // Passe à l'image suivante
+                }
+            }, slideDuration);
+        }
+
+        // Arrête le diaporama automatique
+        function stopAutoSlide() {
+            clearInterval(slideInterval);
+        }
+
+
         // Initialise le premier affichage pour chaque projet
         document.addEventListener('DOMContentLoaded', () => {
             for (const projectId in currentImageIndices) {
@@ -200,7 +221,14 @@
                     images[currentImageIndices[projectId]].classList.add('active');
                     updateDots(projectId, currentImageIndices[projectId]);
                 }
+
+                // Met en pause le diaporama au survol de la souris
+                container.addEventListener('mouseenter', stopAutoSlide);
+                // Redémarre le diaporama quand la souris quitte le conteneur
+                container.addEventListener('mouseleave', startAutoSlide);
             }
+            // Démarre le diaporama automatique au chargement de la page
+            startAutoSlide();
         });
     </script>
 </body>
