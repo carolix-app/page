@@ -1,6 +1,6 @@
 /* Variables CSS pour les couleurs */
 :root {
-    --light-green: #d4edc4; /* Vert clair principal */
+    --light-green: #F0E2B6; /* Vert clair principal */
     --dark-green: #4f8a10;  /* Vert foncé pour le texte/accents */
     --background: #f0fff0;   /* Arrière-plan très clair, presque blanc */
     --accent-color: #ff9933; /* Une couleur d'accent pour le bouton Ko-fi */
@@ -29,20 +29,33 @@ header {
     background-color: var(--light-green);
     padding: 20px;
     border-bottom: 3px solid var(--dark-green);
+    /* Le conteneur interne gérera la disposition en ligne */
+    display: flex; /* Pour centrer le conteneur lui-même */
+    justify-content: center; /* Pour centrer le conteneur lui-même */
+    align-items: center; /* Pour centrer le conteneur lui-même */
+}
+
+/* Style pour le conteneur à l'intérieur de l'en-tête pour organiser le logo et le texte */
+header .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    align-items: center; /* Alignement vertical du logo et du texte */
+    justify-content: space-between; /* Pousse le logo à gauche, le texte à droite */
+    text-align: left; /* Annule l'alignement central par défaut du conteneur */
+    width: 100%; /* S'assure que le conteneur prend toute la largeur disponible dans sa max-width */
+    padding: 0; /* Le padding est déjà géré par le header parent */
 }
 
 .logo {
-    width: 280px;
-    margin-bottom: 10px;
+    width: 150px; /* Taille du logo réduite */
+    margin-right: 20px; /* Espace entre le logo et le texte */
+    margin-bottom: 0; /* Supprime la marge inférieure précédente */
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Texte plus grand */
     color: #555;
+    flex-grow: 1; /* Permet au paragraphe de prendre l'espace restant */
+    text-align: right; /* Alignement du texte à droite */
 }
 
 /* Section Portfolio */
@@ -92,6 +105,7 @@ header p {
 .project-content {
     padding: 20px;
     text-align: center; /* Centre le contenu (comme les liens) */
+    margin-bottom: 20px; /* Espace pour remplacer le <br> */
 }
 
 
@@ -129,7 +143,6 @@ header p {
     font-weight: bold;
     border: none; /* Supprime la bordure par défaut des boutons */
     background-color: rgba(0, 0, 0, 0.5); /* Rend le fond un peu plus opaque pour le contraste */
-    padding: 12px 16px; /* Ajuste le padding pour les boutons */
     font-size: 20px;
     transition: 0.3s ease;
     border-radius: 0 3px 3px 0;
