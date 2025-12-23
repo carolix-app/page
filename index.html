@@ -11,7 +11,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.carolix.site/">
     <meta property="og:title" content="Carolix | Studio de Développement Web & Mobile - Jeux & Apps">
-    <meta property="og:description" content="Portfolio de CarolixTech, organisme spécialisé dans la création de sites web et d'applications Android. Découvrez nos projets comme Moulah et Knight's Tour.">
+    <meta property="og:description"
+        content="Portfolio de CarolixTech, organisme spécialisé dans la création de sites web et d'applications Android. Découvrez nos projets comme Moulah et Knight's Tour.">
     <meta property="og:image" content="https://www.carolix.site/logo.png">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.carolix.site/">
@@ -19,6 +20,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap"
         rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.19.0/tarteaucitron.min.js"></script>
+
+    <script type="text/javascript">
+        tarteaucitron.init({
+            "privacyUrl": "policy.html", /* Lien vers votre page de politique de confidentialité */
+            "bodyPosition": "bottom", /* Position du bandeau (top ou bottom) */
+
+            "hashtag": "#tarteaucitron", /* Ouverture automatique du panel avec le hashtag */
+            "cookieName": "tarteaucitron", /* Nom du Cookie */
+
+            "orientation": "middle", /* Position de la bannière : top, bottom, middle, popup */
+            "groupServices": false, /* Regrouper les services par catégorie */
+            "serviceDefaultState": "wait", /* Statut par défaut (wait = attendre le clic) */
+
+            "showAlertSmall": false, /* Afficher le petit citron en bas à droite */
+            "cookieslist": false, /* Afficher la liste des cookies */
+
+            "closePopup": false, /* Afficher une croix pour fermer le popup */
+
+            "showIcon": true, /* Afficher l'icône cookie pour gérer les choix */
+            //"iconSrc": "", /* URL optionnelle pour changer l'icône */
+            "iconPosition": "BottomRight", /* Position de l'icône : BottomRight, BottomLeft, TopRight et TopLeft */
+
+            "adblocker": false, /* Afficher un avertissement si un adblocker est détecté */
+            "DenyAllCta": true, /* Afficher le bouton "Tout refuser" */
+            "AcceptAllCta": true, /* Afficher le bouton "Tout accepter" */
+            "highPrivacy": true, /* Désactiver le consentement automatique au scroll */
+
+            "handleBrowserDNTRequest": false, /* Respecter le paramètre "Do Not Track" du navigateur */
+
+            "removeCredit": false, /* Retirer le lien vers tarteaucitron.io */
+            "moreInfoLink": true, /* Afficher le lien "En savoir plus" */
+
+            "useExternalCss": false, /* Si false, le CSS standard sera chargé */
+            //"cookieDomain": ".my-multisite-domaine.fr", /* Nom de domaine partagé pour le multisite */
+
+            "readmoreLink": "" /* Lien vers la page "Lire plus" */
+        });
+    </script>
+    <script type="text/javascript">
+        tarteaucitron.user.gtagUa = 'G-GJJVGV4R6F'; // Votre ID Google Analytics 4
+        tarteaucitron.user.gtagMore = function () { /* Ici pour des paramétrages avancés si besoin */ };
+        (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+    </script>
     <link rel="stylesheet" href="style.css?v=1.1">
 
     <script type="application/ld+json">
@@ -44,7 +90,8 @@
             }
         ]
         }
-</script>
+        </script>
+
 </head>
 
 <body>
@@ -72,19 +119,18 @@
                             votre journée de travail. Visualisez votre productivité en <strong>temps réel</strong> pour
                             rester motivé et rendre le travail moint ch**nt!</p>
                         <a href="#" class="project-link" target="_blank">Voir sur GitHub →</a>
-                    </div>                    
+                    </div>
                     <div class="project-image-container" data-project="moulah">
-                        <img src="moulah_3.png"
-                            alt="Écran du calculateur de revenus de l'application Moulah."
+                        <img src="moulah_3.png" alt="Écran du calculateur de revenus de l'application Moulah."
                             class="project-image active" title="Aperçu de l'application Moulah 1">
-                        <img src="moulah_2.png"
-                            alt="Écran de suivi des objectifs financiers dans l'application Moulah."
+                        <img src="moulah_2.png" alt="Écran de suivi des objectifs financiers dans l'application Moulah."
                             class="project-image" title="Aperçu de l'application Moulah 2">
-                        <img src="moulah_1.png"
-                            alt="Écran des simulateurs financiers de l'application Moulah."
+                        <img src="moulah_1.png" alt="Écran des simulateurs financiers de l'application Moulah."
                             class="project-image" title="Aperçu de l'application Moulah 3">
-                        <button class="prev" onclick="changeImage('moulah', -1)" aria-label="Image précédente">&#10094;</button>
-                        <button class="next" onclick="changeImage('moulah', 1)" aria-label="Image suivante">&#10095;</button>
+                        <button class="prev" onclick="changeImage('moulah', -1)"
+                            aria-label="Image précédente">&#10094;</button>
+                        <button class="next" onclick="changeImage('moulah', 1)"
+                            aria-label="Image suivante">&#10095;</button>
                     </div>
                 </div>
 
@@ -96,16 +142,16 @@
                             directement en ligne. Développé pour offrir une expérience utilisateur fluide et une logique
                             de jeu complexe.</p>
                         <a href="https://knightstour.online/" class="project-link" target="_blank">Jouer en Ligne →</a>
-                    </div>                    
+                    </div>
                     <div class="project-image-container" data-project="knightstour">
                         <img src="knightstour_1.png"
                             alt="Interface du jeu de réflexion Knight's Tour affichant un échiquier."
                             class="project-image active">
-                        <img src="knightstour_2.png"
-                            alt="Menu des options du jeu Knight's Tour."
-                            class="project-image">
-                        <button class="prev" onclick="changeImage('knightstour', -1)" aria-label="Image précédente">&#10094;</button>
-                        <button class="next" onclick="changeImage('knightstour', 1)" aria-label="Image suivante">&#10095;</button>
+                        <img src="knightstour_2.png" alt="Menu des options du jeu Knight's Tour." class="project-image">
+                        <button class="prev" onclick="changeImage('knightstour', -1)"
+                            aria-label="Image précédente">&#10094;</button>
+                        <button class="next" onclick="changeImage('knightstour', 1)"
+                            aria-label="Image suivante">&#10095;</button>
                     </div>
 
                 </div>
@@ -125,9 +171,10 @@
                     href="mailto:carolix.app@gmail.com"><strong>carolix.app@gmail.com</strong></a></p>
         </section>
 
-    </div>
+        </div>
 
-    </main><footer>
+    </main>
+    <footer>
         <div class="container">
             <p>&copy; 2025 CarolixTech. Déployé avec ❤️ via GitHub Actions.</p>
         </div>
