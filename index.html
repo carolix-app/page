@@ -6,15 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Portfolio de CarolixTech, organisme spécialisé dans la création de sites web et d'applications Android. Découvrez nos projets comme Moulah et Knight's Tour.">
+        content="Portfolio de CarolixTech, organisme spécialisé dans la création de sites web et d'applications Android. Découvrez nos projets comme Moulah, Quiz CDM et Knight's Tour.">
     <title>CarolixTech - Studio de Développement Web & Mobile</title>
+    <link rel="icon" href="logo.png" sizes="any">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="apple-touch-icon" href="logo.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.carolix.site/">
     <meta property="og:title" content="Carolix | Studio de Développement Web & Mobile - Jeux & Apps">
     <meta property="og:description"
-        content="Portfolio de CarolixTech, organisme spécialisé dans la création de sites web et d'applications Android. Découvrez nos projets comme Moulah et Knight's Tour.">
+        content="Portfolio de CarolixTech, organisme spécialisé dans la création de sites web et d'applications Android. Découvrez nos projets comme Moulah, Quiz CDM et Knight's Tour.">
     <meta property="og:image" content="https://www.carolix.site/logo.png">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.carolix.site/">
@@ -86,6 +87,12 @@
             },
             {
             "@type": "SoftwareApplication",
+            "name": "Quizcdm.com",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "Web Browser"
+            },
+            {
+            "@type": "SoftwareApplication",
             "name": "Moulah",
             "applicationCategory": "FinanceApplication",
             "operatingSystem": "Android"
@@ -99,18 +106,21 @@
 <body>
 
     <header>
-        <div class="container">
+        <div class="container" style="display: flex; align-items: center;">
             <img src="logo.png" alt="CarolixTech Logo" class="logo">
 
-            <h1>CarolixTech : Studio de Développement Web & Mobile</h1>
+            <div style="display: flex; flex-direction: column; text-align: left; margin-left: 20px;">
+                <h1 style="margin: 0 0 10px 0;">CarolixTech : Studio de Dev Web & Mobile</h1>
 
-            <p>Bienvenue ! Nous sommes un organisme amateur pour la création de sites web performants et
-                d'applications Android dynamiques.<br>Découvrez notre travail ci-dessous !</p>
+                <p style="margin: 0 0 15px 0;">Bienvenue ! Nous sommes un organisme pour la création de sites
+                    web performants et d'applications Android dynamiques.<br>Découvrez notre travail ci-dessous !</p>
 
-            <nav style="margin-top: 15px;">
-                <a href="#projets" style="margin-right: 15px; color: white; text-decoration: underline;">Nos Projets</a>
-                <a href="#contact" style="color: white; text-decoration: underline;">Contact & Soutien</a>
-            </nav>
+                <nav>
+                    <a href="#projets" style="margin-right: 15px; color: rgb(3, 1, 1); text-decoration: underline;">Nos
+                        Projets</a>
+                    <a href="#contact" style="color: rgb(27, 13, 13); text-decoration: underline;">Contact & Soutien</a>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -145,6 +155,33 @@
                     </div>
                 </div>
 
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-tag">Jeu Web (Static)</span>
+                        <h3>Quiz Coupe du Monde (quizcdm.com)</h3>
+                        <p style="text-align: left;">Un <strong>quiz interactif</strong> passionnant pour les fans de 
+                            football. Testez vos connaissances sur l'histoire de la Coupe du Monde avec une interface 
+                            fluide et immersive.</p>
+                        <a href="https://quizcdm.com/" class="project-link" target="_blank">Jouer en Ligne →</a>
+                    </div>
+                    <div class="project-image-container" data-project="quizcdm">
+                        <img src="worldcup_1.png"
+                            alt="Interface du Quiz Coupe du Monde affichant une question sur le football."
+                            class="project-image active">
+                        <img src="worldcup_2.png"
+                            alt="Page de résultats du Quiz Coupe du Monde montrant le score."
+                            class="project-image">
+                        <img src="worldcup_3.png"
+                            alt="Statistiques et records historiques dans le Quiz Coupe du Monde."
+                            class="project-image">
+
+                        <button class="prev" onclick="changeImage('quizcdm', -1)"
+                            aria-label="Image précédente">&#10094;</button>
+                        <button class="next" onclick="changeImage('quizcdm', 1)"
+                            aria-label="Image suivante">&#10095;</button>
+                    </div>
+
+                </div>
                 <div class="project-card">
                     <div class="project-content">
                         <span class="project-tag">Jeu Web (Static)</span>
@@ -195,6 +232,7 @@
         // Garde une trace de l'image actuellement affichée pour chaque projet
         const currentImageIndices = {
             moulah: 0,
+            quizcdm: 0,
             knightstour: 0
         };
 
